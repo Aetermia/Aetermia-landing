@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Heart, Users, Award } from 'lucide-react';
+import { Target, Globe, Users, Award } from 'lucide-react';
 
 export function About() {
   return (
@@ -22,27 +22,28 @@ export function About() {
             </span>
 
             <h2 id="about-title" className="section-title">
-              Un equipo apasionado
+              Especialistas en tecnología
               <br />
-              <span className="text-primary-600">por la excelencia tecnológica</span>
+              <span className="text-primary-600">para el turismo municipal</span>
             </h2>
 
             <p className="section-subtitle mt-6">
-              En AETERMIA, creemos que el código limpio y las soluciones efectivas transforman negocios.
-              Nuestro equipo multidisciplinario combina experiencia en desarrollo web, arquitectura de software
-              y diseño de user experience para entregar resultados excepcionales.
+              En AETERMIA entendemos cómo funciona el turismo en los municipios:
+              temporadas, eventos, gestión de información y la necesidad de que todo
+              esté siempre actualizado.
             </p>
 
             <p className="mt-6 text-lg text-dark-600 leading-relaxed">
-              Trabajamos con transparencia, comunicación constante y enfoque en resultados.
-              Desde startups hasta empresas establecidas, cada proyecto es único y merece una solución a medida.
+              Trabajamos con transparencia, comunicación constante y enfoque en
+              resultados para tu destino. Cada municipio es único y merece una
+              solución pensada para sus atractivos, su comunidad y sus visitantes.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6">
               {[
-                { icon: Target, label: 'Equipo comprometido' },
-                { icon: Users, label: '20+ proyectos' },
-                { icon: Heart, label: 'Pasión por el código' },
+                { icon: Target, label: 'Enfoque en tu destino' },
+                { icon: Globe, label: 'Portales multilingüe' },
+                { icon: Users, label: 'Para secretarías y entes' },
                 { icon: Award, label: 'Calidad garantizada' },
               ].map((item) => (
                 <motion.div
@@ -74,8 +75,8 @@ export function About() {
                   <div className="w-16 h-16 rounded-2xl bg-primary-600 text-white flex items-center justify-center mb-4 shadow-md">
                     <Users className="w-8 h-8" aria-hidden="true" />
                   </div>
-                  <h3 className="text-lg font-semibold text-dark-900">Enfoque Colaborativo</h3>
-                  <p className="text-sm text-dark-600 mt-1">Transformamos ideas complejas en productos digitales de alto impacto.</p>
+                  <h3 className="text-lg font-semibold text-dark-900">Enfoque en resultados</h3>
+                  <p className="text-sm text-dark-600 mt-1">Transformamos la información turística de tu municipio en una experiencia digital clara para el visitante.</p>
                 </div>
               </div>
 

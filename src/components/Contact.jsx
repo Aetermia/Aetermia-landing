@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader2 } from 'lu
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
+    organization: '',
     email: '',
     message: '',
     botcheck: '',
@@ -42,11 +43,13 @@ export function Contact() {
         },
         body: JSON.stringify({
           access_key: accessKey,
-          subject: `Nuevo mensaje de ${formData.name} - AETERMIA Web`,
+          subject: `Nuevo mensaje de ${formData.name}${formData.organization ? ` (${formData.organization})` : ''} - AETERMIA Web`,
           from_name: 'AETERMIA Landing',
           name: formData.name.trim(),
           email: formData.email.trim(),
-          message: formData.message.trim(),
+          message: formData.organization
+            ? `${formData.message.trim()}\n\nMunicipio/Organización: ${formData.organization.trim()}`
+            : formData.message.trim(),
           botcheck: formData.botcheck,
         }),
       });
@@ -55,7 +58,7 @@ export function Contact() {
 
       if (result.success) {
         setStatus('success');
-        setFormData({ name: '', email: '', message: '', botcheck: '' });
+        setFormData({ name: '', organization: '', email: '', message: '', botcheck: '' });
       } else {
         setStatus('error');
         setErrorMessage(result.message || 'No se pudo enviar el mensaje. Por favor intenta nuevamente.');
@@ -97,12 +100,13 @@ export function Contact() {
             Contacto
           </span>
           <h2 id="contact-title" className="section-title">
-            Hablemos de tu
+            Potenciemos el turismo
             <br />
-            <span className="text-primary-600">próximo proyecto</span>
+            <span className="text-primary-600">de tu municipio</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            ¿Tienes una idea en mente? Cuéntanos tu proyecto y te responderemos en menos de 24 horas.
+            ¿Sos parte de una municipalidad, secretaría de turismo o ente turístico?
+            Contanos tu situación y te respondemos en menos de 24 horas.
           </p>
         </motion.div>
 
@@ -229,6 +233,22 @@ export function Contact() {
                     </div>
 
                     <div>
+                      <label htmlFor="organization" className="block text-sm font-medium text-dark-700 mb-1.5">
+                        Municipio / Organización
+                      </label>
+                      <input
+                        type="text"
+                        id="organization"
+                        name="organization"
+                        value={formData.organization}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 rounded-lg border border-dark-300 focus:ring-primary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors"
+                        placeholder="Ej: Municipalidad de Miramar"
+                        disabled={status === 'submitting'}
+                      />
+                    </div>
+
+                    <div>
                       <label htmlFor="email" className="block text-sm font-medium text-dark-700 mb-1.5">
                         Email <span className="text-primary-600">*</span>
                       </label>
@@ -264,7 +284,7 @@ export function Contact() {
                         className={`w-full px-4 py-3 rounded-lg border transition-colors resize-none ${
                           errors.message ? 'border-red-500 focus:ring-red-500' : 'border-dark-300 focus:ring-primary-500'
                         } focus:outline-none focus:ring-2 focus:ring-offset-2`}
-                        placeholder="Cuéntanos tu proyecto, objetivos, tecnologías..."
+                        placeholder="Contanos qué necesita hoy tu turismo local: portal, eventos, reservas..."
                         aria-invalid={errors.message ? 'true' : 'false'}
                         aria-describedby={errors.message ? 'message-error' : undefined}
                         disabled={status === 'submitting'}

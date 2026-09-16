@@ -1,36 +1,37 @@
 import { motion } from 'framer-motion';
 import { 
-  Code, 
+  Globe, 
   Layers, 
-  Monitor, 
+  TrendingUp, 
   Wrench, 
   ArrowRight
 } from 'lucide-react';
+import { WaveDivider } from './WaveDivider';
 
 const services = [
   {
-    icon: Code,
-    title: 'Desarrollo Web',
-    description: 'Aplicaciones web modernas, escalables y performantes. React, Next.js, Vue, TypeScript y las últimas tecnologías.',
-    features: ['SPAs y PWAs', 'E-commerce', 'Dashboards', 'SEO Optimizado'],
+    icon: Globe,
+    title: 'Desarrollo de Portales Turísticos',
+    description: 'Sitios y aplicaciones de promoción para tu destino: atractivos, mapas, multilingüe y SEO local con las últimas tecnologías.',
+    features: ['Sitios de destinos', 'Mapas interactivos', 'Multilingüe ES/EN/PT', 'SEO local'],
   },
   {
     icon: Layers,
-    title: 'Software a Medida',
-    description: 'Soluciones enterprise personalizadas que se adaptan exactamente a tus procesos de negocio.',
-    features: ['ERP/CRM Custom', 'APIs & Microservicios', 'Integraciones', 'Migración Legacy'],
+    title: 'Software de Gestión Turística',
+    description: 'Sistemas a medida para tu secretaría: carga de eventos, reservas y datos propios sin depender de plataformas externas.',
+    features: ['Gestión de eventos', 'Reservas online', 'Registro de visitantes', 'Dashboards'],
   },
   {
-    icon: Monitor,
-    title: 'Consultoría IT',
-    description: 'Estrategia tecnológica, arquitectura de software y auditorías técnicas para tomar las mejores decisiones.',
-    features: ['Arquitectura Cloud', 'Code Review', 'DevOps', 'Seguridad'],
+    icon: TrendingUp,
+    title: 'Escalado y Optimización',
+    description: 'Tu portal preparado para temporadas altas y picos de visitas: rendimiento, nube y crecimiento de tráfico sin sobresaltos.',
+    features: ['Alta disponibilidad', 'Infraestructura en la nube', 'Optimización de performance', 'Crecimiento de tráfico'],
   },
   {
     icon: Wrench,
-    title: 'Mantenimiento y Soporte',
-    description: 'Soporte continuo, monitorización 24/7 y evolución constante de tus aplicaciones.',
-    features: ['SLA Garantizado', 'Monitoring Proactivo', 'Actualizaciones', 'Backup & Recovery'],
+    title: 'Mantenimiento y Soporte Continuo',
+    description: 'Información siempre actualizada: horarios, eventos y tarifas al día, con soporte y monitoreo permanente de tu portal.',
+    features: ['Contenido actualizado', 'Soporte técnico', 'Monitoreo proactivo', 'Backup & Recovery'],
   },
 ];
 
@@ -55,9 +56,10 @@ export function Services() {
   return (
     <section 
       id="servicios"
-      className="py-20 sm:py-28 lg:py-32 bg-cream-200"
+      className="relative py-20 sm:py-28 lg:py-32 bg-cream-200"
       aria-labelledby="services-title"
     >
+      <WaveDivider fill="#ffffff" />
       <div className="section-container">
         {/* Header de la sección */}
         <motion.div
@@ -71,13 +73,13 @@ export function Services() {
             Nuestros Servicios
           </span>
           <h2 id="services-title" className="section-title">
-            Soluciones tecnológicas
+            Servicios pensados
             <br />
-            <span className="text-primary-600">para tu negocio</span>
+            <span className="text-primary-600">para el turismo municipal</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Cubrimos todo el ciclo de vida del desarrollo de software: desde la ideación 
-            hasta el mantenimiento continuo.
+            Cubrimos todo el ciclo de vida de tu portal turístico: desde el desarrollo
+            inicial hasta el mantenimiento, la actualización y el escalado.
           </p>
         </motion.div>
 
@@ -153,14 +155,14 @@ export function Services() {
           transition={{ delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <p className="text-dark-600 mb-4">¿Necesitas algo más específico?</p>
+          <p className="text-dark-600 mb-4">¿Tu municipio necesita algo particular?</p>
           <motion.a
             href="#contacto"
             className="btn-primary inline-flex"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Hablemos de tu proyecto
+            Hablemos de tu destino
             <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
           </motion.a>
         </motion.div>

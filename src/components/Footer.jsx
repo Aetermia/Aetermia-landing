@@ -7,10 +7,10 @@ const footerLinks = {
     { label: 'Contacto', href: '#contacto' },
   ],
   servicios: [
-    { label: 'Desarrollo Web', href: '#servicios' },
-    { label: 'Software a Medida', href: '#servicios' },
-    { label: 'Consultoría IT', href: '#servicios' },
-    { label: 'Mantenimiento', href: '#servicios' },
+    { label: 'Desarrollo de Portales Turísticos', href: '#servicios' },
+    { label: 'Software de Gestión Turística', href: '#servicios' },
+    { label: 'Escalado y Optimización', href: '#servicios' },
+    { label: 'Mantenimiento y Soporte', href: '#servicios' },
   ],
   legal: [
     { label: 'Privacidad', href: '#contacto' },
@@ -36,7 +36,8 @@ export function Footer() {
               <span className="text-2xl font-bold text-white">AETERMIA</span>
             </a>
             <p className="text-dark-400 text-sm leading-relaxed mb-6 max-w-sm">
-              Agencia de soluciones informáticas especializada en desarrollo web y software a medida. Innovación y excelencia en cada entrega.
+              Especialistas en desarrollo, mantenimiento y escalado de portales y
+              aplicaciones de turismo para municipios. Innovación y excelencia en cada entrega.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (

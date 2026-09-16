@@ -12,6 +12,18 @@ export default {
           100: '#FEFEF5',
           200: '#FEFCF8',
         },
+        sand: {
+          50: '#FFF9F2',
+          100: '#FEF0E0',
+          200: '#FBDDBB',
+          300: '#F7C58C',
+          400: '#F2A75C',
+          500: '#E9862E',
+          600: '#D9731E',
+          700: '#B15916',
+          800: '#8A4515',
+          900: '#703713',
+        },
         primary: {
           50: '#f0fdfa',
           100: '#ecfeff',
@@ -39,7 +51,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

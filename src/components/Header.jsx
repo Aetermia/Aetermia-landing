@@ -70,7 +70,7 @@ export function Header() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Solicitar Presupuesto
+              Solicitar Propuesta
             </motion.a>
           </motion.div>
 
@@ -124,7 +124,7 @@ export function Header() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Solicitar Presupuesto
+                  Solicitar Propuesta
                 </motion.a>
               </div>
             </motion.div>
