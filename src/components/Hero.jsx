@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronDown, Globe, MapPin, Calendar, Users, Star, Sun, Mountain } from 'lucide-react';
+import { ArrowRight, ChevronDown, Globe, MapPin, Calendar, Users, Star, Sun, Mountain, LayoutDashboard } from 'lucide-react';
 
 const attractions = ['Playa y balneario', 'Casco histórico', 'Circuito gastronómico'];
 const languages = ['ES', 'EN', 'PT'];
@@ -107,9 +107,18 @@ export function Hero() {
             className="hidden lg:block relative"
             aria-hidden="true"
           >
-            <div className="relative w-full max-w-md ml-auto">
-              {/* Tarjeta de destino */}
-              <div className="bg-white rounded-3xl shadow-xl shadow-primary-900/10 border border-dark-200/80 overflow-hidden">
+            <div className="relative w-full max-w-lg ml-auto">
+              {/* Tarjeta de destino con marco de navegador */}
+              <div className="bg-white rounded-2xl shadow-xl shadow-primary-900/10 border border-dark-200/80 overflow-hidden">
+                {/* Barra estilo navegador */}
+                <div className="flex items-center gap-1.5 px-4 py-2.5 bg-dark-100 border-b border-dark-200">
+                  <span className="w-2.5 h-2.5 rounded-full bg-dark-300" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-dark-300" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-dark-300" />
+                  <span className="ml-3 text-[11px] text-dark-500 font-medium">
+                    turismo.tumunicipio.gob.ar
+                  </span>
+                </div>
                 {/* Imagen ficticia de destino */}
                 <div className="relative h-44 bg-gradient-to-br from-sand-200 via-sand-400 to-primary-600">
                   <Mountain className="absolute -bottom-8 right-8 w-28 h-28 text-white/25" />
@@ -188,7 +197,7 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -right-8 -bottom-6 bg-white rounded-xl shadow-lg border border-dark-200 p-3.5 pr-5 flex items-center gap-3"
+                className="absolute -right-6 -bottom-6 bg-white rounded-xl shadow-lg border border-dark-200 p-3.5 pr-5 flex items-center gap-3"
               >
                 <div className="w-10 h-10 rounded-lg bg-sand-100 text-sand-600 flex items-center justify-center">
                   <Users className="w-5 h-5" />
@@ -196,6 +205,21 @@ export function Hero() {
                 <div>
                   <p className="text-sm font-bold text-dark-900">12.4k</p>
                   <p className="text-[11px] text-dark-500">visitas este mes</p>
+                </div>
+              </motion.div>
+
+              {/* Tarjeta flotante: panel de gestión */}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                className="absolute -right-10 top-20 bg-white rounded-xl shadow-lg border border-dark-200 p-3.5 pr-5 flex items-center gap-3"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary-600 text-white flex items-center justify-center">
+                  <LayoutDashboard className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-dark-900">Panel de gestión</p>
+                  <p className="text-[11px] text-dark-500">Tu equipo lo actualiza solo</p>
                 </div>
               </motion.div>
             </div>

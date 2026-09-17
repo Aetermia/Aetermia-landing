@@ -52,7 +52,7 @@ export function Process() {
           <h2 id="process-title" className="section-title">
             Un proceso claro,
             <br />
-            <span className="text-primary-600">de la primera reunión al escalado</span>
+            <span className="text-primary-600">del diagnóstico al soporte continuo</span>
           </h2>
           <p className="section-subtitle mx-auto">
             Acompañamos a tu municipalidad en cada etapa, con comunicación constante

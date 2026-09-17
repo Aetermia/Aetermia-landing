@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Dribbble, Mail } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 
 const footerLinks = {
   empresa: [
@@ -19,9 +19,8 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/Aetermia', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/aetermia-soluciones', label: 'LinkedIn' },
 ];
 
 export function Footer() {

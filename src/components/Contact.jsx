@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -79,7 +79,6 @@ export function Contact() {
     { icon: Mail, label: 'Email Corporativo', value: 'contacto@aetermia.site', href: 'mailto:contacto@aetermia.site' },
     { icon: Mail, label: 'Email Alternativo', value: 'equipoaetermia@gmail.com', href: 'mailto:equipoaetermia@gmail.com' },
     { icon: MapPin, label: 'Ubicación', value: 'Buenos Aires, Argentina', href: null },
-    { icon: Phone, label: 'Teléfono', value: '+54 9 11 0000-0000', href: 'tel:+5491100000000' },
   ];
 
   return (
