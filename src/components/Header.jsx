@@ -4,6 +4,7 @@ import { useMobileMenu } from '../hooks/useMobileMenu';
 
 const navLinks = [
   { href: '#servicios', label: 'Servicios' },
+  { href: '#proyectos', label: 'Proyectos' },
   { href: '#nosotros', label: 'Nosotros' },
   { href: '#contacto', label: 'Contacto' },
 ];
